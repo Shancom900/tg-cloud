@@ -1,3 +1,16 @@
+import subprocess
+import sys
+
+# List your required packages
+required_packages = [
+    "python-telegram-bot==20.6",
+    "google-cloud-firestore",
+    "requests"
+]
+
+# Install missing packages
+for package in required_packages:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 import os
 import uuid
 import requests
